@@ -1,0 +1,11 @@
+l=[3.14, 2.5, 7, 1.618, 5, 9.8, 4]
+l.pop(2)
+print(l)
+# l.insert(2,'Hen')
+print(l)
+l.sort()
+print(l)
+l.reverse()
+print(l)
+print(l.index(9.8))
+print(len(l))

@@ -1,0 +1,17 @@
+1. To show list of database == \l
+2. to creat database = create databse (database name)
+3. to switch database = \c (database name)
+4. to delete database = Drop (database Name)
+5. to create a table = CREATE TABLE table name ( column1 datatype , column2 name datatype, ....);
+6. to get relations = \d
+7. to insert data = INSERT INTO 'Table Name' (column1,column2) VALUES ( Value1.value2,....) # For char use ' '
+8. to update data = UPDATE table SET column = value WHERE condition
+9. to delete data = DELETE FROM table WHERE condition
+10. to select data = SELECT * FROM table WHERE condition
+11. to show data = \d table
+12. to show all data = SELECT * FROM table
+13. to show data by column = SELECT column FROM table
+14. to show data by column and condition = SELECT column FROM table WHERE condition
+15. to delete content from a table= TRUNCATE TABLE table name;
+
+
