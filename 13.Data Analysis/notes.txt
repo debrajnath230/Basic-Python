@@ -1,0 +1,61 @@
+1. To Read a python file using jupyter= df=pd.read_csv(path) or df=pd.read_csv(path, headers= None)
+2. for java = df=pd.read_json(path)
+3. for R = df=read.csv(path)
+4. post that use code print(df)
+5. df.drop([10],axis=0)  # to delete rows 
+6. df.drop([10],axis=1)  # to delete columns
+7. df.head(10)  # to get first 10 rows
+8. df.tail(10)   # to get last 10 rows
+9. df.describe()  # to get statistical summary
+10. df.info()     # to get information about the dataframe
+11. df.shape     # to get the shape of the dataframe
+12. df.isnull()   # to check for null values
+13. df.isna()     # to check for null values
+14. df.notnull()  # to check for non null values
+15. df.notna()    # to check for non null values
+16. df.unique()   # to get unique values
+17. to rename a column = df.rename(columns = {'Name 1':'Name 2'})
+18. Data Normalization types
+    1. Min-Max Normalization formula
+        = (x-min)/(max-min)
+    2. Standard Deviation Normalization formula
+        = (x-mean)/std
+18. Boxplot and scatter plot
+    1. Boxplot = df.boxplot()
+    2. Scatter Plot = plt.scatter(df['column name'])
+    3. Histogram = df.hist()
+    4. Bar chart = df.bar()
+    5. Pie chart = df.pie()
+    6. Heatmap = df.heatmap()
+    7. Correlation matrix = df.corr()
+    8. Pairplot = df.pairplot()
+19. Seaborn library is used for visualizing data in Python
+    # 1 sns.lineplot(data=df)
+    # 2 sns.barplot(data=df)
+    # 3 sns.countplot(data=df)
+    # 4 sns.histplot(data=df)
+    # 5 sns.kdeplot(data=df)
+    # 6 sns.boxplot(data=df)
+    # 7 sns.scatterplot(data=df)
+    # 8 sns.violinplot(data=df)
+    # 9 sns.histplot(data=df, kde=True)
+    # 10 sns.stripplot(data=df)
+    # 11 sns.swarmplot(data=df)
+    # 12  sns.pointplot(data=df)
+    # 13 sns.catplot(kind='bar', data=df)
+    # 14 sns.catplot(kind='box', data=df)
+    # 15 sns.catplot(kind='violin', data=df)
+    # 16 sns.catplot(kind='hist', data=df)
+    # 17 sns.catplot(kind='swarm', data=df)
+    # 18 sns.catplot(kind='point', data=df)
+    # 19 sns.catplot(kind='strip', data=df)
+
+
+
+
+
+
+
+
+
+

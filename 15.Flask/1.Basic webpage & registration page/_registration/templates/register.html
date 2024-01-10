@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #7FFF00;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="registrationForm" action="/confirmation" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone_number" pattern="[0-9]{10}" required placeholder="Enter 10-digit phone number">
+
+        <button type="submit" id="submitBtn" disabled>Register</button>
+    </form>
+
+    <script>
+        // Add event listeners for input validation
+        const nameInput = document.getElementById('name');
+        const cityInput = document.getElementById('city');
+        const phoneInput = document.getElementById('phone');
+        const submitBtn = document.getElementById('submitBtn');
+
+        nameInput.addEventListener('input', validateForm);
+        cityInput.addEventListener('input', validateForm);
+        phoneInput.addEventListener('input', validateForm);
+
+        function validateForm() {
+            const nameValid = nameInput.value.trim() !== '';
+            const cityValid = cityInput.value.trim() !== '';
+            const phoneValid = /^\d{10}$/.test(phoneInput.value.trim());
+
+            submitBtn.disabled = !(nameValid && cityValid && phoneValid);
+        }
+    </script>
+
+</body>
+</html>
